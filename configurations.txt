@@ -1,8 +1,23 @@
---save-dev webpack webpack-cli webpack-merge webpack-dev-server html-webpack-plugin style-loader css-loader html-loader
+# ESLint & Prettier
+npm init @eslint/config@latest
+npm install --save-dev --save-exact prettier
 
-Remove "type": "commonjs" or "module"
+# Remove "type": "commonjs" or "module"
 
+# Webpack related
+npm install --save-dev eslint-config-prettier webpack webpack-cli webpack-merge webpack-dev-server html-webpack-plugin style-loader css-loader html-loader
+
+# package.json scripts
     ,
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack serve --config webpack.dev.js",
-    "deploy": "git subtree push --prefix dist origin gh-pages"
+    "deploy": "git subtree push --prefix dist origin gh-pages",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix --ext .js,.jsx .",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check"
+
+# eslint.config.js
+import eslintConfigPrettier from "eslint-config-prettier/flat";
+    ,
+    eslintConfigPrettier,
