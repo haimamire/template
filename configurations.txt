@@ -1,3 +1,5 @@
+npm init
+
 # ESLint & Prettier
 npm init @eslint/config@latest
 npm install --save-dev --save-exact prettier
@@ -8,7 +10,7 @@ npm install --save-dev --save-exact prettier
 npm install --save-dev eslint-config-prettier webpack webpack-cli webpack-merge webpack-dev-server html-webpack-plugin style-loader css-loader html-loader
 
 # package.json scripts
-    ,
+,
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack serve --config webpack.dev.js",
     "deploy": "git subtree push --prefix dist origin gh-pages",
@@ -18,6 +20,6 @@ npm install --save-dev eslint-config-prettier webpack webpack-cli webpack-merge 
     "format:check": "prettier . --check"
 
 # eslint.config.js
-import eslintConfigPrettier from "eslint-config-prettier/flat";
-    ,
-    eslintConfigPrettier,
+import { defineConfig, globalIgnores } from "eslint/config";
+
+globalIgnores(["webpack.*.js"]),
