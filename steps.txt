@@ -2,5 +2,5 @@
 npm init -y --init-type=module
 
 # Install dev dependencies
-npm install --save-dev eslint@latest @eslint/js@latest eslint-config-prettier jest @babel/preset-env webpack webpack-cli webpack-merge webpack-dev-server html-webpack-plugin style-loader css-loader html-loader 
+npm install --save-dev eslint@latest @eslint/js@latest eslint-config-prettier globals jest @babel/preset-env webpack webpack-cli webpack-merge webpack-dev-server html-webpack-plugin style-loader css-loader html-loader 
 npm install --save-dev --save-exact prettier
