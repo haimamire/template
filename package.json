@@ -1,0 +1,21 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "jest",
+    "watch": "jest --watch *.js",
+    "build": "webpack --config webpack.prod.js",
+    "dev": "webpack serve --config webpack.dev.js",
+    "deploy": "git subtree push --prefix dist origin gh-pages",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix --ext .js,.jsx .",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
